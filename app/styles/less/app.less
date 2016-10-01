@@ -1,9 +1,14 @@
+@import "node_modules/bootstrap/less/bootstrap.less";
+
+body {
+  background: url('../../images/body-background.png') #F8F7F7;
+}
+
 .flex-container {
   display: -webkit-flex;
   display: flex;
   -webkit-flex-flow: row wrap;
   flex-flow: row wrap;
-  text-align: center;
 }
 
 .flex-container > * {
@@ -17,35 +22,98 @@
 }
 
 header {
-  background: black;color:white;
-}
+  background: #FFFFFF;
 
-.app-logo-block {
-  color: #56C3A6;
+  .app-logo-block {
+    a {
+      color: #4ECDC4;
+      text-decoration: none;
+      display: inline-block;
 
-  .app-logo {
-
+      .app-logo {
+        font-size: 40px;
+      }
+      .app-logo-text {
+        font-size: 25px;
+      }
+    }
   }
 
-  .app-logo-text{
-    font-size: 18px;
+  .app-title-desc {
+    display: inline-block;
+    span.title {
+      color: #1E824C;
+      font-size: 16px;
+    }
+
+    span.desc {
+      color: #979797;
+    }
+
   }
 }
 
-footer {background: #aaa;color:white;}
-.nav {background:#eee;}
-
-.nav ul {
-  list-style-type: none;
-  padding: 0;
+footer {
+  background: #aaa;
+  color: white;
 }
 
-.nav ul a {
-  text-decoration: none;
+.nav {
+  .nav-title {
+    background: #EDF3F5;
+    border: 2px solid #D0D2D2;
+    border-radius: 4px;
+    text-align: center;
+    padding: 4px 6px;
+
+    .logo {
+      float: left;
+    }
+  }
+  ul.sort-options {
+    list-style-type: none;
+    border: 1px solid #6AC9AF;
+    margin: 8px 0 0 0;
+    padding: 10px;
+    line-height: 2.5;
+
+    li {
+      color: #979797;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .sort-total {
+    background: #E5EBE9;
+    border: 2px solid #90D5C4;
+    border-radius: 8px;
+    text-align: center;
+    padding: 8px 6px;
+  }
+
 }
 
 @media all and (min-width: 768px) {
-  .nav {text-align:left;-webkit-flex: 1 auto;flex:1 auto;-webkit-order:1;order:1;}
-  .article {-webkit-flex:5 0px;flex:5 0px;-webkit-order:2;order:2;}
-  footer {-webkit-order:3;order:3;}
+  .nav {
+    text-align: left;
+    -webkit-flex: 1 auto;
+    flex: 1 auto;
+    -webkit-order: 1;
+    order: 1;
+  }
+
+  .article {
+    -webkit-flex: 5 0px;
+    flex: 5 0px;
+    -webkit-order: 2;
+    order: 2;
+  }
+
+  footer {
+    -webkit-order: 3;
+    order: 3;
+  }
 }
